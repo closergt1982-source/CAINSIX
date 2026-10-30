@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="theme-color" content="#101325" />
-<title>CHAIN SIX — 数字連鎖パズル Ver.0.11.1</title>
+<title>CHAIN SIX — 数字連鎖パズル Ver.0.11.2</title>
 <style>
 :root{color-scheme:dark;--bg:#0d1020;--panel:#1b2137;--line:#313950;--muted:#9da9c4;--accent:#72e2d2;--gold:#ffcf77}
 *{box-sizing:border-box}html,body{min-height:100%;margin:0}body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",sans-serif;background:radial-gradient(ellipse at 10% 0%,#26314d 0%,transparent 48%),radial-gradient(ellipse at 95% 30%,#202348 0%,transparent 45%),var(--bg);color:#f7f9ff;overscroll-behavior:none}button{font:inherit;cursor:pointer;touch-action:manipulation}button:focus-visible,.cell:focus-visible{outline:2px solid var(--gold);outline-offset:2px}.shell{width:min(100%,540px);min-height:100dvh;margin:auto;padding:calc(15px + env(safe-area-inset-top)) 14px calc(22px + env(safe-area-inset-bottom));display:flex;flex-direction:column;gap:13px}.top{display:flex;justify-content:space-between;align-items:center;gap:10px}.brand{display:flex;align-items:center;gap:10px}.brand-mark{width:37px;height:37px;border-radius:12px;display:grid;place-items:center;font-size:19px;background:linear-gradient(140deg,#7ae8d6,#6c90f5);color:#0d142b;font-weight:900;box-shadow:0 7px 22px #60cbb75c}.title{font-size:23px;letter-spacing:.055em;font-weight:900;line-height:1}.sub{font-size:10px;color:#9da9c4;letter-spacing:.14em;margin-top:5px}.top-actions{display:flex;gap:7px}.iconbtn{min-width:39px;height:39px;border-radius:12px;border:1px solid #3b4561;background:#262e49;color:#f6f7ff;display:grid;place-items:center;padding:0 10px;font-size:18px}.iconbtn:active{transform:scale(.96)}.stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}.stat{background:linear-gradient(160deg,#252d48,#1a2137);border:1px solid #343e59;border-radius:13px;padding:11px 9px}.stat-name{font-size:10px;color:#aab5d0;font-weight:700;letter-spacing:.1em}.stat-value{font-size:clamp(17px,5vw,24px);font-weight:900;font-variant-numeric:tabular-nums;margin-top:4px;line-height:1.3}.stat-value.highlight{color:var(--gold)}.game-card{background:linear-gradient(155deg,#1b2239,#171b30);border:1px solid #323e5a;border-radius:20px;padding:12px;box-shadow:0 18px 40px #0004;position:relative}.nextbar{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:12px}.nextleft{display:flex;gap:10px;align-items:center}.next-tile{width:54px;height:54px;display:grid;place-items:center;border-radius:12px;color:white;font-size:22px;font-weight:900;box-shadow:inset 0 1px 1px #fff5,0 5px 15px #0003}.nextlabel{font-size:11px;letter-spacing:.1em;color:#aab5d0;font-weight:800}.hint{font-size:12px;line-height:1.5;color:#e3e9fa;margin-top:3px}.queue{display:flex;align-items:center;gap:7px;color:var(--muted);font-size:11px}.tiny-next{display:grid;place-items:center;min-width:38px;height:38px;border-radius:10px;font-size:16px;font-weight:900;color:white}.board-wrap{position:relative;background:#0d1329;border:1px solid #38445f;border-radius:13px;padding:5px;overflow:hidden}.board{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-template-rows:repeat(8,1fr);gap:4px;width:100%;aspect-ratio:6 / 8;touch-action:manipulation}.cell{min-width:0;min-height:0;border:0;border-radius:7px;background:#242e46;position:relative;display:grid;place-items:center;padding:0;color:inherit;transition:background .12s,transform .12s;user-select:none;-webkit-user-select:none}.cell.empty:after{content:"";height:3px;width:3px;border-radius:100%;background:#ffffff1b}.cell.column-focus.empty{background:#354263}.cell.column-focus:not(.empty){filter:brightness(1.18)}.cell.drop-target.empty{box-shadow:inset 0 0 0 1.5px #8de6d8}.cell:active{transform:scale(.94)}.tile{width:100%;height:100%;display:grid;place-items:center;border-radius:7px;background:linear-gradient(155deg,var(--tile-light),var(--tile-dark));box-shadow:inset 0 1px 1px #ffffff64,inset 0 -2px 1px #0002,0 2px 6px #0005;font-weight:900;color:#fff;font-size:clamp(11px,3.4vw,24px);font-variant-numeric:tabular-nums;letter-spacing:-.055em;text-shadow:0 1px 1px #0005;overflow:hidden}.tile.long{font-size:clamp(9px,2.5vw,17px)}.tile.new{animation:pop .23s cubic-bezier(.2,1.4,.6,1)}.tile.merging{animation:charge .16s alternate infinite}.bump{animation:bump .26s ease-out}@keyframes pop{from{transform:scale(.65);opacity:.3}to{transform:scale(1);opacity:1}}@keyframes charge{to{transform:scale(1.1);filter:brightness(1.5)}}@keyframes bump{50%{transform:scale(1.16)}}.board-message{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none;background:#090e20ba;backdrop-filter:blur(3px);z-index:10;padding:20px}.board-message[hidden]{display:none}.end-card{max-width:270px;text-align:center;border-radius:20px;padding:25px 18px;background:#252e4b;border:1px solid #63739a;box-shadow:0 10px 50px #0009}.end-title{font-size:25px;font-weight:900;margin-bottom:8px}.end-score{font-size:40px;font-weight:900;color:var(--gold);margin:12px 0}.primary{border:0;border-radius:12px;background:linear-gradient(110deg,#75e4d1,#84aeff);color:#10182a;font-weight:900;min-height:46px;padding:0 17px}.primary:active{transform:scale(.98)}.unlockbar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:13px}.unlocks{display:flex;gap:6px;align-items:center}.unlock-label{font-size:11px;color:var(--muted);margin-right:3px}.unlock{display:flex;gap:4px;align-items:center;justify-content:center;border:1px solid #434e68;background:#222c45;color:#a2acc1;font-size:11px;font-weight:800;padding:6px 9px;border-radius:7px}.unlock.active{border-color:#77dac8;color:#acffee;background:#234746}.combo{font-size:12px;font-weight:900;color:#ffda94;min-height:16px;text-align:right}.controls{display:flex;gap:8px}.control-button{flex:1;border:1px solid #3f4c6c;border-radius:12px;background:#25314d;color:#e9efff;padding:11px 10px;font-weight:750;font-size:13px}.control-button.selected{border-color:#72e2d2;color:#9bf0e0}.note{color:#a5b1cc;font-size:11px;line-height:1.65;text-align:center}.toast{position:fixed;left:50%;top:18%;transform:translate(-50%,-20px);background:#e8fdf7;color:#0a3a34;border:1px solid #b5fff0;border-radius:12px;font-weight:900;font-size:15px;padding:11px 17px;z-index:25;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;max-width:calc(100vw - 35px);text-align:center}.toast.show{opacity:1;transform:translate(-50%,0)}dialog{width:min(94vw,420px);border-radius:20px;background:#1e2943;color:white;border:1px solid #516180;padding:23px;box-shadow:0 15px 60px #000a}dialog::backdrop{background:#000a;backdrop-filter:blur(4px)}dialog h2{margin:0 0 12px;font-size:20px}dialog p,dialog li{font-size:13px;line-height:1.8;color:#e2e8f7}dialog ul{padding-left:20px}dialog .dialog-actions{display:flex;justify-content:flex-end;margin-top:17px;gap:8px}.secondary{border:1px solid #596783;background:#293651;color:white;padding:10px 15px;border-radius:10px;font-weight:800}.dev-details{margin-top:12px;font-size:12px;color:#c9d7eb}.dev-details summary{cursor:pointer;list-style:none;font-weight:800;padding:9px 3px}.dev-details select{width:100%;margin-top:8px;border:1px solid #607091;color:#f7f9ff;background:#24314e;border-radius:9px;padding:10px}.dev-details p{font-size:11px;color:#9da9c4}.how{font-size:12px;color:#bcc7df;text-align:center;line-height:1.6}@media(max-height:740px){.shell{gap:8px;padding-top:calc(10px + env(safe-area-inset-top))}.stat{padding:7px 9px}.stat-value{font-size:19px}.game-card{padding:9px}.nextbar{margin-bottom:7px}.next-tile{width:44px;height:44px}.tiny-next{min-width:35px;height:35px}.unlockbar{margin-top:8px}}@media(min-width:541px){.board{max-height:56vh;aspect-ratio:auto;height:56vh}.tile{font-size:23px}.tile.long{font-size:19px}}
@@ -107,7 +107,7 @@
  <div class="unlockbar"><div class="unlocks"><span class="unlock-label">UNLOCK</span><div id="unlock64" class="unlock">🔒 64</div><div id="unlock128" class="unlock">🔒 128</div></div><div id="combo" class="combo" aria-live="polite"></div></div></section>
  <div class="controls"><button class="control-button" id="restartBtn">↻ 最初から</button><button class="control-button selected" id="randomBtn">⚄ バランス乱数</button></div>
  <div class="how">同じ数字が上下左右で接触すると合体。<br>1面＝2倍 ／ 2面＝4倍 ／ 3面＝8倍。連鎖を狙おう！</div>
- <div class="note">Ver.0.11.1 ｜ 自動保存対応 ｜ 救済 <span id="pityPoints">+0pt</span></div>
+ <div class="note">Ver.0.11.2 ｜ 自動保存対応 ｜ 救済 <span id="pityPoints">+0pt</span></div>
  <div class="score-next">次のスコアチャンス：<span id="nextScoreChance">5,000</span> 点</div>
 </main>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
@@ -135,14 +135,14 @@ const boardEl=$('#board'),motionLayer=$('#motionLayer'),scoreEl=$('#score'),best
 let board,score,maxTile,best,current,next,unlocked,history,turn,wait,locked,over,activeIds=[],lastPlaced=null,mode='balanced',sound=false,soundCtx=null,toastTimer=null,idSerial=0,selectedCol=-1;
 let items={hammer:0,swap:0,reroll:0},hammerArmed=false,swapArmed=false,swapFirst=null,pityPoints=0;
 let roundMode='normal',modeDrops=0,feverAlt=null,feverSelected='A',challengeMax=1024,pendingChallengeTile=0,challengeCards=[],challengeChosen=false;
-let nextScoreMilestone=5000,eventQueue=[],activeEvent=null,bonusWheelAngle=0,bonusAnimating=false;
+let nextScoreMilestone=5000,eventQueue=[],activeEvent=null,bonusWheelAngle=0,bonusAnimating=false,pendingModes=[];
 // Save settled game states only. A reload during an animation restores the last completed move.
 function saveRun(){
  if(locked||!board)return false;
  const dialog=$('#chanceDialog'),picked=document.querySelector('.challenge-card.picked');
  const state={version:1,board,score,maxTile,current,next,unlocked:[...unlocked],history,turn,wait,
   idSerial,items,pityPoints,mode,roundMode,modeDrops,feverAlt,feverSelected,
-  nextScoreMilestone,eventQueue,activeEvent,bonusWheelAngle,
+  nextScoreMilestone,eventQueue,activeEvent,bonusWheelAngle,pendingModes,
   challengeMax,pendingChallengeTile,challengeCards,challengeChosen,
   challengeOpen:dialog.open,bonusOpen:$('#bonusDialog').open,challengeTitle:$('#chanceTitle').textContent,
   challengeResult:$('#challengeResult').textContent,challengePicked:picked?Number(picked.dataset.chance):null,
@@ -162,12 +162,13 @@ function restoreRun(){
   !st.unlocked.every(n=>ALL.includes(n))||!Array.isArray(st.history)||!st.history.every(n=>ALL.includes(n))||
   !st.items||!ITEM_KEYS.every(k=>Number.isInteger(st.items[k])&&st.items[k]>=0&&st.items[k]<=3)||
   !['balanced','pure'].includes(st.mode)||!['normal','fever','hell'].includes(st.roundMode)||
-  !Number.isInteger(st.modeDrops)||st.modeDrops<0||st.modeDrops>Math.max(FEVER_DROPS,HELL_DROPS)||
+  (!Number.isInteger(st.modeDrops)||st.modeDrops<0||st.modeDrops>Math.max(FEVER_DROPS,HELL_DROPS))||
   !['A','B'].includes(st.feverSelected)||
   (st.roundMode==='fever'&&!ALL.includes(st.feverAlt))||
   !validNumber(st.challengeMax)||!validNumber(st.pendingChallengeTile))return false;
  const validEvent=e=>!!e&&typeof e==='object'&&['tile','score'].includes(e.type)&&Number.isSafeInteger(e.value)&&e.value>0&&(['cards','roulette','slot'].includes(e.game))&&((e.outcome===null||e.outcome===undefined)||['FEVER','ITEM','HELL'].includes(e.outcome));
  if(st.eventQueue!==undefined&&(!Array.isArray(st.eventQueue)||st.eventQueue.length>80||!st.eventQueue.every(validEvent)))return false;
+  if(st.pendingModes!==undefined&&(!Array.isArray(st.pendingModes)||st.pendingModes.length>80||!st.pendingModes.every(x=>x==='FEVER'||x==='HELL')))return false;
  if(st.activeEvent!==undefined&&st.activeEvent!==null&&!validEvent(st.activeEvent))return false;
  if(st.nextScoreMilestone!==undefined&&(!Number.isSafeInteger(st.nextScoreMilestone)||st.nextScoreMilestone<5000))return false;
  const allIds=st.board.flat().filter(Boolean).map(t=>t.id);
@@ -184,6 +185,7 @@ function restoreRun(){
  nextScoreMilestone=st.nextScoreMilestone||5000;
  if(st.nextScoreMilestone===undefined){while(nextScoreMilestone<=score&&nextScoreMilestone<Number.MAX_SAFE_INTEGER/2)nextScoreMilestone*=2}
  eventQueue=Array.isArray(st.eventQueue)?st.eventQueue.slice():[];
+  pendingModes=Array.isArray(st.pendingModes)?st.pendingModes.slice():[];
  activeEvent=st.activeEvent||null;
  bonusWheelAngle=Number.isFinite(st.bonusWheelAngle)?st.bonusWheelAngle:0;
  bonusAnimating=false;
@@ -413,8 +415,9 @@ function updateModeHUD(){
  const fever=roundMode==='fever'&&modeDrops>0,hell=roundMode==='hell'&&modeDrops>0;
  strip.hidden=!fever&&!hell;
  strip.className='mode-strip'+(fever?' fever':hell?' hell':'');
- if(fever)strip.textContent=`⚡ FEVER TIME! 残り${modeDrops}ドロップ ・合体スコア×2`;
- else if(hell)strip.textContent=`🔥 HELL MODE 残り${modeDrops}ドロップ ・連鎖しにくい乱数`;
+ const upcoming=pendingModes.length?' ｜ 待機：'+pendingModes.slice(0,3).map(m=>m==='FEVER'?'⚡FEVER':'🔥HELL').join(' → ')+(pendingModes.length>3?` ほか${pendingModes.length-3}件`:''):'';
+ if(fever)strip.textContent=`⚡ FEVER TIME! 残り${modeDrops}ドロップ ・合体スコア×2${upcoming}`;
+ else if(hell)strip.textContent=`🔥 HELL MODE 残り${modeDrops}ドロップ ・連鎖しにくい乱数${upcoming}`;
  choice.hidden=!fever;
  if(fever){
   $('#feverA').textContent=String(current);$('#feverB').textContent=String(feverAlt);
@@ -434,10 +437,30 @@ function chooseFeverAlternative(primary){
  function refreshFeverOptions(){
   feverSelected='A';feverAlt=roundMode==='fever'&&modeDrops>0?chooseFeverAlternative(current):null;
  }
+// Start a newly won mode without discarding an already-running one.
+// deferDraw=true is used when the next mode begins right after a drop;
+// the drop handler will prepare its next numbers under the new mode.
+function activateSpecialMode(result,deferDraw=false){
+ if(result==='FEVER'){
+  roundMode='fever';modeDrops=FEVER_DROPS;
+  if(!deferDraw)refreshFeverOptions();
+ }else if(result==='HELL'){
+  roundMode='hell';modeDrops=HELL_DROPS;feverAlt=null;feverSelected='A';
+  if(!deferDraw){current=chooseNumber();next=chooseNumber()}
+ }
+}
 function advanceModeAfterDrop(){
- if(modeDrops<=0)return;
+ if(modeDrops<=0)return false;
  modeDrops--;
- if(modeDrops===0){roundMode='normal';feverAlt=null;feverSelected='A'}
+ if(modeDrops===0){
+  roundMode='normal';feverAlt=null;feverSelected='A';
+  if(pendingModes.length){
+   const nextMode=pendingModes.shift();
+   activateSpecialMode(nextMode,true);
+   return nextMode==='HELL'; // Reroll the upcoming numbers with HELL bias.
+  }
+ }
+ return false;
 }
 function registerChallenge(n){
  if(n>=2048&&n>challengeMax){
@@ -596,13 +619,15 @@ function showNextEvent(){
 }
 function applyChanceOutcome(result){
  let message='';
- if(result==='FEVER'){
-  roundMode='fever';modeDrops=FEVER_DROPS;refreshFeverOptions();
-  message='FEVER TIME！ 12ドロップ・高低2択・得点×2';
- }else if(result==='HELL'){
-  roundMode='hell';modeDrops=HELL_DROPS;feverAlt=null;feverSelected='A';
-  current=chooseNumber();next=chooseNumber();
-  message='HELL MODE！ 12ドロップの間、合体しにくい数字が出やすい！';
+ if(result==='FEVER'||result==='HELL'){
+  const name=result==='FEVER'?'FEVER TIME':'HELL MODE';
+  if(modeDrops>0&&roundMode!=='normal'||pendingModes.length){
+   pendingModes.push(result);
+   message=`${name}を予約！ 現在の特殊モードが終了した後、獲得順に開始（待機${pendingModes.length}件）`;
+  }else{
+   activateSpecialMode(result);
+   message=result==='FEVER'?'FEVER TIME！ 12ドロップ・高低2択・得点×2':'HELL MODE！ 12ドロップの間、合体しにくい数字が出やすい！';
+  }
  }else{
   const available=ITEM_KEYS.filter(key=>items[key]<3);
   if(available.length){const key=available[Math.floor(Math.random()*available.length)];items[key]++;message=ITEM_NAMES[key]+'を1個獲得！'}
@@ -709,11 +734,14 @@ async function drop(c){
   const placed=roundMode==='fever'&&modeDrops>0&&feverSelected==='B'?feverAlt:current;
    const t={n:placed,id:++idSerial};board[r][c]=t;lastPlaced=null;turn++;beep();draw();
   await animateLanding(r,c);const chain=await resolve(t.id);
-  updateWait();advanceModeAfterDrop();current=next;next=chooseNumber();refreshFeverOptions();selectedCol=-1;awardItem(chain);
+   updateWait();const newHell=advanceModeAfterDrop();
+   if(newHell){current=chooseNumber();next=chooseNumber()}
+   else{current=next;next=chooseNumber()}
+   refreshFeverOptions();selectedCol=-1;awardItem(chain);
   finishIfFull();showNextEvent();
  }finally{locked=false;draw();saveRun()}
 }
-function init(){motionLayer.replaceChildren();board=Array.from({length:ROWS},()=>Array(COLS).fill(null));score=0;maxTile=0;unlocked=new Set([2,4,8,16,32]);history=[];turn=0;wait={};locked=false;over=false;activeIds=[];lastPlaced=null;selectedCol=-1;items={hammer:0,swap:0,reroll:0};pityPoints=0;roundMode='normal';modeDrops=0;feverAlt=null;feverSelected='A';challengeMax=1024;pendingChallengeTile=0;challengeChosen=false;nextScoreMilestone=5000;eventQueue=[];activeEvent=null;bonusWheelAngle=0;bonusAnimating=false;hammerArmed=false;swapArmed=false;swapFirst=null;overlay.hidden=true;current=chooseNumber();next=chooseNumber();comboEl.textContent='';hintEl.textContent='列をタップして落とそう';draw();saveRun()}
+function init(){motionLayer.replaceChildren();board=Array.from({length:ROWS},()=>Array(COLS).fill(null));score=0;maxTile=0;unlocked=new Set([2,4,8,16,32]);history=[];turn=0;wait={};locked=false;over=false;activeIds=[];lastPlaced=null;selectedCol=-1;items={hammer:0,swap:0,reroll:0};pityPoints=0;roundMode='normal';modeDrops=0;feverAlt=null;feverSelected='A';challengeMax=1024;pendingChallengeTile=0;challengeChosen=false;nextScoreMilestone=5000;eventQueue=[];pendingModes=[];activeEvent=null;bonusWheelAngle=0;bonusAnimating=false;hammerArmed=false;swapArmed=false;swapFirst=null;overlay.hidden=true;current=chooseNumber();next=chooseNumber();comboEl.textContent='';hintEl.textContent='列をタップして落とそう';draw();saveRun()}
 $('#hammerBtn').addEventListener('click',()=>{if(locked||over||!items.hammer)return;swapArmed=false;swapFirst=null;hammerArmed=!hammerArmed;selectedCol=-1;hintEl.textContent=hammerArmed?'🔨 壊すブロックをタップ（再タップで解除）':'列をタップして落とそう';draw();saveRun()});
 $('#swapBtn').addEventListener('click',()=>{if(locked||over||!items.swap)return;hammerArmed=false;swapArmed=!swapArmed;swapFirst=null;selectedCol=-1;hintEl.textContent=swapArmed?'⇄ 1個目のブロックを選ぼう':'列をタップして落とそう';draw();saveRun()});
 $('#rerollBtn').addEventListener('click',()=>{if(locked||over||!items.reroll||!canPlay())return;hammerArmed=false;swapArmed=false;swapFirst=null;items.reroll--;current=chooseNumber(current);refreshFeverOptions();hintEl.textContent='列をタップして落とそう';draw();saveRun();popToast(`🎲 DROPを${current}に変更！`)});
